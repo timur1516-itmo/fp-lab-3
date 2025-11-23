@@ -21,7 +21,6 @@
 
    ["-h" "--help" "Show help"]])
 
-
 (defn exit-program
   ([code]
    (System/exit code))
@@ -43,7 +42,6 @@
 
   options)
 
-
 (defn stepped-x-values
   "Все x, кратные step, в [l, r]. Устойчива к double-погрешностям."
   [l r step]
@@ -52,7 +50,6 @@
         k1 (long (Math/floor (/ (+ r eps) step)))]
     (map (fn [k] (* k step))
          (range k0 (inc k1)))))
-
 
 (defn my-linear-interpolation [points step l r]
   (let [[p1 p2] points
